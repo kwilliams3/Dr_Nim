@@ -1,6 +1,27 @@
 #include <iostream>
+#include <string>
 
 void playersTurn(int* numberOfMarbles) {
+
+    // Ask the user how many marbles they'd like to take
+    bool legalChoice = false;
+    int marblesToTake;
+    do {
+        std::cout << "How many marbles would you like to take (" << *numberOfMarbles << " left): ";
+        std::string userChoice;
+        std::getline(std::cin, userChoice);
+        if (userChoice != "1" && userChoice != "2" && userChoice != "3") {
+            std::cout << "Please enter 1, 2, or 3." << std::endl;
+        } else {
+            legalChoice = true;
+            marblesToTake = std::stoi(userChoice);
+        }
+    } while (!legalChoice);
+
+    // Decrement the number of marbles the user took from the number of marbles available
+    *numberOfMarbles -= marblesToTake;
+    std::cout << "You have taken " << marblesToTake << " marble(s) - leaving Dr. Nim with "
+              << *numberOfMarbles << " marble(s)." << std::endl << std::endl;
 }
 
 void drNimsTurn(int* numberOfMarbles) {
@@ -28,5 +49,6 @@ int main() {
         playersTurn(numberOfMarblesPtr);
         drNimsTurn(numberOfMarblesPtr);
     }
+    std::cout << "Alas! Dr. Nim has claimed victory!";
     return 0;
 }
