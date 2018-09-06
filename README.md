@@ -3,7 +3,7 @@
 # Dr_Nim
 
 ### Introduction
-Dr_Nim is based on the well known game of Nim. More specifically, Dr_Nim was modeled after the implementation of Nim used by John Thomas Godfrey. Mr. Godfrey invented a toy version of Nim and cleverly called it "Dr. Nim".
+Dr_Nim is based on the game of Nim. More specifically, Dr_Nim was modeled after the implementation of Nim used by John Thomas Godfrey. Mr. Godfrey invented a toy version of Nim and cleverly called it "Dr. Nim".
 
 Dr. Nim is less of a "game" and more of a prank. This is due to the fact that there is simply no way to win! So long as you go first, Dr. Nim is mathematically guaranteed to be crowned the victor at the end of each round. YouTube celebrity standupmaths does a fantastic job of thoroughly explaining the algorithm associated with the game of Dr. Nim. I highly recommend watching [standupmaths video](https://youtu.be/9KABcmczPdg) if you're interested in learning more about how the game of Dr. Nim works.
 
